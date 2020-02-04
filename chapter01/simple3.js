@@ -1,5 +1,5 @@
 class LikeButton extends React.Component {
-    constructor(pros) {
+    constructor(props) {
         super(props);
         this.state = { liked : false };
     }
@@ -21,7 +21,7 @@ class Container extends React.Component {
         return React.createElement (
             'div',
             null,
-            React.createElement(likeButton),
+            React.createElement(LikeButton),
             React.createElement(
                 'div',
                 { style: { marginTop: 20} },
