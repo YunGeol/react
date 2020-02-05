@@ -1,0 +1,10 @@
+.big {
+  width: 500px;
+}
+.small {
+  width: 300px;
+}
+.button {
+  height: 30px;
+  background-color: #aaaaaa;
+}
