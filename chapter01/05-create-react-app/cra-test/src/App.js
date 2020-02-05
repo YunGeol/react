@@ -1,10 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TodoList from './TodoList';
 
 function App() {
   return (
     <div className="App">
+      <TodoList />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -23,5 +26,9 @@ function App() {
     </div>
   );
 }
+console.log(`NODE_ENV = ${process.env.NODE_ENV}`);
+console.log(`REACT_APP_DATA_API = ${process.env.REACT_APP_DATA_API}`);
+console.log(`REACT_APP_LOGIN_API = ${process.env.REACT_APP_LOGIN_API}`);
+console.log(`REACT_APP_NODE_VERSION = ${process.env.REACT_APP_NODE_VERSION}`);
 
 export default App;
