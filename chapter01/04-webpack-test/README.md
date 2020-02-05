@@ -66,7 +66,9 @@ npm install webpack webpack-cli react react-dom
 ```
 
 ### 04. webpack 을 이용해 파일들을 합치기
+```
 npx webpack
+```
 
 ```
 {project root}
