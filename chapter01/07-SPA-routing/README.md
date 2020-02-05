@@ -50,3 +50,79 @@ export default App;
 ```
 npm install react-router-dom
 ``` 
+
+* App-3.js 와 Rooms.js 추가. App-3.js의 내용을 App.js 에 덮어씌움.
+
+[변경된 App.js 내용]
+```
+import React, { Component } from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Rooms from './Rooms';
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div style={{ padding: 20, border: '5px solid gray' }}>
+          <Link to="/">홈</Link>
+          <br />
+          <Link to="/photo">사진</Link>
+          <br />
+          <Link to="/rooms">방 소개</Link>
+          <br />
+          <Route exact path="/" component={Home} />
+          <Route path="/photo" component={Photo} />
+          <Route path="/rooms" component={Rooms} />
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
+
+function Home({ match }) {
+  return <h2>이 곳은 홈페이지입니다.</h2>;
+}
+function Photo({ match }) {
+  return <h2>여기서 사진을 감상하세요.</h2>;
+}
+
+export default App;
+```
+
+[Rooms.js 의 내용]
+```
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
+
+function Rooms({ match }) {
+  return (
+    <div>
+      <h2>여기는 방을 소개하는 페이지입니다.</h2>
+      <Link to={`${match.url}/blueRoom`}>파란 방입니다</Link>
+      <br />
+      <Link to={`${match.url}/greenRoom`}>초록 방입니다</Link>
+      <br />
+      <Route path={`${match.url}/:roomId`} component={Room} />
+      <Route
+        exact
+        path={match.url}
+        render={() => <h3>방을 선택해 주세요.</h3>}
+      />
+    </div>
+  );
+}
+export default Rooms;
+
+function Room({ match }) {
+  return <h2>{`${match.params.roomId} 방을 선택하셨습니다.`}</h2>;
+}
+
+```
+
+* Rooms 컴포넌트 내부에는 또다시 라우팅을 처리하는 코드가 들어 있다
+* Route를 통해서 렌더링되는 컴포넌트는 match라는 속성값을 사용할 수 있다
+* match.url 은 Route 컴포넌트의 path 속성값과 같다
+  * 따라서, Rooms 컴포넌트의 match.url은 /rooms와 같다.
+* Route 컴포넌트의 path 속성값에서 콜론을 사용하면 파라미터를 나타낼 수 있다.
+  * 추출된 파라미터는 match.params.{파라미터 이름} 형식으로 사용될 수 있다. 
+ 
