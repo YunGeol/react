@@ -35,3 +35,5 @@ node_modules/
 dist-server/
 .next
 test
+__tests__
+package-lock.json
