@@ -1,16 +1,23 @@
 class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
-  render() {
-    const text = this.state.liked ? '좋아요 취소4' : '좋아요';
-    return React.createElement(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      text,
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = { liked : false };
+    }
+    render() {
+        const text = this.state.liked ? '좋아요 취소' : '좋아요';
+        return React.createElement(
+            'button',
+            { onClick: () => {
+                    if (this.state.liked == true) {
+                        this.setState( {liked : false} )
+                    } else {
+                        this.setState( {liked : true} )
+                    }
+                }
+            },
+            text,
+        );
+    }
 }
 
 class Container extends React.Component {

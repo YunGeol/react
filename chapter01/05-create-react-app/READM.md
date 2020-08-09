@@ -50,7 +50,7 @@ cra-test
 
 ### 파일 import
 * src 폴더 바깥에 있는 파일을 import 로 가져오려하면 실패한다.
-* index. htrnl에서 참조하는 파일은 public 폴더 밑에 있어야 한다. 
+* index. html에서 참조하는 파일은 public 폴더 밑에 있어야 한다. 
 * public 폴더 밑에 있는 자바스크립트 파일이나 css 파일을 script 태그를 이용해서 index.html에 포함시킬 수 있다. 
 * 하지만 특별한 이유가 없다면 index.html에 직접 연결하는 것보다는 ... 
 * src 폴더 밑에서 import 키워드를 사용해서 포함시키는 게 좋다. 
@@ -171,7 +171,7 @@ npm run eject
  
 
 ### 자바스크립트 지원 범위
-* create-react -app에서는 ES6의 모든 기능 지원한다.
+* create-react-app에서는 ES6의 모든 기능 지원한다.
 * 지수 연산자(exponentiation operator) 
 * async await 함수 
 * 나머지 연산자(rest operator), 전개 연산자(spread operator) 
