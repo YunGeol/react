@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import Home from './Home';
 import About from './About';
 
-export default function App({aaa}) {
-    const [page, setPage] = useState(aaa);
+export default function App({page}) {
+    const [page, setPage] = useState(page);
     useEffect(() => {
         window.onpopstate = event => {
             setPage(event.state);

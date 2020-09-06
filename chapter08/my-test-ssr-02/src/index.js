@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import App from './App'
 
-ReactDom.hydrate(
-    <App aaa="home" />
+ReactDom.render(
+    <App mypage="home" />
     , document.getElementById('root')
-)
+);
