@@ -1,0 +1,19 @@
+{
+  "name": "04.static-and-dynamic",
+  "version": "1.0.0",
+  "description": "``` npm init -y npm install next express react react-dom ```",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

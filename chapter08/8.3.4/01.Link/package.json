@@ -1,0 +1,17 @@
+{
+  "name": "01.Link",
+  "version": "1.0.0",
+  "description": "``` 코드 8-45 Link 컴포넌트를 이용하도록 page1.js 파일 수정하기 // ... import Link from 'next/link'; function Page1() {      return (         <div>             <Link href=\"/page2\"> // ❶                 <a>page2로 이동</a>              </Link>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

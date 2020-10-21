@@ -1,0 +1,17 @@
+{
+  "name": "8.4.2",
+  "version": "1.0.0",
+  "description": "* 동적 임포트로 코드 분할하기",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

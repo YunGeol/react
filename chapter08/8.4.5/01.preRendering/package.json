@@ -1,0 +1,21 @@
+{
+  "name": "01.preRendering",
+  "version": "1.0.0",
+  "description": "* 넥스트에서 빌드 시 getInitialProps 함수가 없는 페이지는 자동으로 미리 렌더링된다. * 따라서 getInitialProps 함수는 꼭 필요한 경우에만 작성하는 게 좋다. * 만약 _app.js 파일에서 getInitialProps 함수를 정 의하면 모든 페이지가 미리 렌더링되지 않으므로 주의하자.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "file-loader": "^6.1.1",
+    "lru-cache": "^6.0.0",
+    "next": "^9.5.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}
